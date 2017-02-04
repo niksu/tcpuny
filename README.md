@@ -21,6 +21,11 @@ to operate strictly within the resources available.
 * The TCP machine is organised into multiple threads which communicate using queues. The implementation is mainly described in [TCPuny.cs](TCPuny.cs) and [TCB.cs](TCB.cs).
 
 
+# Building
+Set the `PAX` environment variable to the path where you cloned
+[Pax](https://github.com/niksu/pax), then run `xbuild Echo.csproj`.
+
+
 # Configuration
 **Activate IP forwarding.** This is done in an OS-specific manner.
 For example on OSX type `$ sysctl -w net.inet.ip.forwarding=1`
@@ -43,13 +48,13 @@ the TCP implementation made available via .NET.
 
 To run the server using TCPuny:
 ```
-$ sudo mono ./Bin/Pax.exe examples/TCP/echo_wiring.json examples/Bin/Examples.dll
+$ sudo mono ${PAX}/Bin/Pax.exe echo_wiring.json Bin/Echo.exe
 ```
 
 To run the server using [TCwraP.cs](TCwraP.cs) (which wraps the .NET Socket class
 using [IBerkeleySocket.cs](IBerkeleySocket.cs)):
 ```
-$ sudo mono examples/Bin/Echo.exe --address 127.0.0.1 --port 7000 -v
+$ sudo mono Bin/Echo.exe --address 127.0.0.1 --port 7000 -v
 ```
 
 For either TCwraP or TCPuny, to test them run this from another terminal:
