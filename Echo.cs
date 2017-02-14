@@ -8,14 +8,15 @@ Use of this source code is governed by the Apache 2.0 license; see LICENSE.
 
 using System;
 using System.Net;
-using PacketDotNet;
-using Pax;
-using Mono.Options;
 using System.Net.NetworkInformation;
-using SharpPcap;
 using System.Threading;
 
-namespace Pax_TCP {
+using PacketDotNet;
+using SharpPcap;
+using Mono.Options;
+
+using Pax;
+using Pax_TCP;
 
 public class Echo_Server {
   IBerkeleySocket tcp;
@@ -184,6 +185,4 @@ public class Pax_Echo_Server : PacketMonitor, IActive {
     // NOTE we assume that 'tcp' inherits from PacketMonitor.
     return ((PacketMonitor)tcp).process_packet(in_port, ref packet);
   }
-}
-
 }

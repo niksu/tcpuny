@@ -29,18 +29,13 @@
       <HintPath>$(PAX)\Bin\Pax.exe</HintPath>
       <SpecificVersion>False</SpecificVersion>
     </Reference>
+    <Reference Include="TCPuny, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>Bin\TCPuny.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IBerkeleySocket.cs" />
-    <Compile Include="TimerCB.cs" />
-    <Compile Include="TCB.cs" />
-    <Compile Include="TCP.cs" />
-    <Compile Include="TCwraP.cs" />
     <Compile Include="Echo.cs" />
-    <None Include="$(PAX)\lib/SharpPcap.dll.config">
-      <Link>SharpPcap.dll.config</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
 <!--
   <Target Name="Build">

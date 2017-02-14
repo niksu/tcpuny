@@ -23,7 +23,7 @@ to operate strictly within the resources available.
 
 # Building
 Set the `PAX` environment variable to the path where you cloned
-[Pax](https://github.com/niksu/pax), then run `xbuild Echo.csproj`.
+[Pax](https://github.com/niksu/pax), then run `xbuild TCPuny.csproj && xbuild Echo.csproj`.
 
 
 # Configuration
