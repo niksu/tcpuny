@@ -28,6 +28,7 @@ public class Echo_Server {
     this.tcp = tcp;
     my_sock = tcp.socket(Internet_Domain.AF_Inet, Internet_Type.Sock_Stream, Internet_Protocol.TCP).value_exc();
     my_addr = new SockAddr_In(port, address);
+    Frontend.check_version_exc(tcp);
   }
 
   public void start () {
@@ -112,7 +113,7 @@ public class NonPax_Echo_Server {
 // TCP instance, and pass the TCP instance to the application.
 // That is, instead of a "main" function, we have a slightly different
 // interface.
-public class Pax_Echo_Server : PacketMonitor, IActive {
+public class Pax_Echo_Server : PacketMonitor, IActive, IVersioned {
   bool verbose = false;
 
   ushort port;
@@ -132,6 +133,10 @@ public class Pax_Echo_Server : PacketMonitor, IActive {
 
   IActiveBerkeleySocket tcp;
   Echo_Server server;
+
+  public int expected_major_Pax_version { get { return 0;} }
+  public int expected_minor_Pax_version { get { return 1;} }
+  public int expected_patch_Pax_version { get { return 0;} }
 
   public Pax_Echo_Server (PhysicalAddress my_mac_address, PhysicalAddress
       gateway_mac_address, IPAddress ip_address, ushort port, uint max_conn,
