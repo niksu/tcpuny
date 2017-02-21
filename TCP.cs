@@ -59,7 +59,7 @@ namespace Pax_TCP {
     TimerCB[] timer_cbs;
 
     public int expected_major_Pax_version { get { return 0;} }
-    public int expected_minor_Pax_version { get { return 1;} }
+    public int expected_minor_Pax_version { get { return 2;} }
     public int expected_patch_Pax_version { get { return 0;} }
 
     // FIXME need to work through logic of how TCPuny is started, as well as how

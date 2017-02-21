@@ -8,7 +8,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <Pax_Major_Version>0</Pax_Major_Version>
-    <Pax_Minor_Version>1</Pax_Minor_Version>
+    <Pax_Minor_Version>2</Pax_Minor_Version>
     <Pax_Build_Version>0</Pax_Build_Version>
     <Pax_Revision_Version>0</Pax_Revision_Version>
   </PropertyGroup>

@@ -136,7 +136,7 @@ public class Pax_Echo_Server : PacketMonitor, IActive, IVersioned {
   Echo_Server server;
 
   public int expected_major_Pax_version { get { return 0;} }
-  public int expected_minor_Pax_version { get { return 1;} }
+  public int expected_minor_Pax_version { get { return 2;} }
   public int expected_patch_Pax_version { get { return 0;} }
 
   public Pax_Echo_Server (PhysicalAddress my_mac_address, PhysicalAddress
