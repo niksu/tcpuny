@@ -49,7 +49,7 @@ the TCP implementation made available via .NET.
 
 To run the server using TCPuny:
 ```
-$ sudo mono ${PAX}/Bin/Pax.exe echo_wiring.json Bin/Echo.exe
+$ sudo mono ${PAX}/Bin/Pax.exe --config=echo_wiring.json --code=Bin/Echo.exe
 ```
 
 To run the server using [TCwraP.cs](TCwraP.cs) (which wraps the .NET Socket class
