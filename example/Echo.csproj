@@ -6,6 +6,12 @@
     <OutputPath>$(TCPUNY)\Bin\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
   </PropertyGroup>
+  <PropertyGroup>
+    <Pax_Major_Version>0</Pax_Major_Version>
+    <Pax_Minor_Version>2</Pax_Minor_Version>
+    <Pax_Build_Version>0</Pax_Build_Version>
+    <Pax_Revision_Version>0</Pax_Revision_Version>
+  </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Reference Include="System" />
@@ -25,9 +31,9 @@
       <HintPath>$(PAX)\Bin\Pax_Lite.dll</HintPath>
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="Pax, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <Reference Include="Pax, Version=$(Pax_Major_Version).$(Pax_Minor_Version).$(Pax_Build_Version).$(Pax_Revision_Version), Culture=neutral, PublicKeyToken=null">
       <HintPath>$(PAX)\Bin\Pax.exe</HintPath>
-      <SpecificVersion>False</SpecificVersion>
+      <SpecificVersion>True</SpecificVersion>
     </Reference>
     <Reference Include="TCPuny, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>$(TCPUNY)\Bin\TCPuny.dll</HintPath>

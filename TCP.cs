@@ -30,7 +30,7 @@ namespace Pax_TCP {
   //    of earlier decisions which themselves might have been the result of timer
   //    expiry (e.g., retransmit) or Berkeley socket functions being called
   //    (write).
-  public class TCPuny : PacketMonitor, IActiveBerkeleySocket {
+  public class TCPuny : PacketMonitor, IActiveBerkeleySocket, IVersioned {
     ICaptureDevice device = null; // NOTE if this is made into an array, we can model multipath behaviour?
     uint max_conn;
     uint max_backlog;
@@ -57,6 +57,10 @@ namespace Pax_TCP {
 
     TCB[] tcbs;
     TimerCB[] timer_cbs;
+
+    public int expected_major_Pax_version { get { return 0;} }
+    public int expected_minor_Pax_version { get { return 2;} }
+    public int expected_patch_Pax_version { get { return 0;} }
 
     // FIXME need to work through logic of how TCPuny is started, as well as how
     //       the user application initialises it.
